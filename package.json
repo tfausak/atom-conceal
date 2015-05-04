@@ -7,5 +7,5 @@
   "main": "./lib/conceal",
   "name": "conceal",
   "repository": "https://github.com/tfausak/atom-conceal",
-  "version": "0.0.0"
+  "version": "0.0.1"
 }
