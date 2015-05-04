@@ -1,0 +1,11 @@
+{
+  "description": "Conceal text and replace it with prettier alternatives.",
+  "engines": {
+    "atom": ">=0.174 <2"
+  },
+  "license": "MIT",
+  "main": "./lib/conceal",
+  "name": "conceal",
+  "repository": "https://github.com/tfausak/atom-conceal",
+  "version": "0.0.0"
+}
