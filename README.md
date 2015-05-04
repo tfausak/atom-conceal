@@ -5,12 +5,14 @@ alternatives.
 
 ![Screenshot][]
 
-To configure Conceal, set the `replacements` option in your init script.
+To configure Conceal, set the `replacements` option in your config.
 
-``` coffee
-# init.coffee
-atom.config.set 'conceal.replacements',
-  '.' : '∘'
+``` cson
+# config.cson
+"*":
+  conceal:
+    replacements:
+      ".": "∘"
 ```
 
 [atom]: https://atom.io
