@@ -14,9 +14,7 @@ module.exports =
         view = atom.views.getView editor
         return unless view
 
-        for element in view.querySelectorAll '::shadow .line span'
-          continue unless element.childElementCount == 0
-
+        for element in view.querySelectorAll '::shadow .line span:not(.concealed)'
           replacement = replacements[element.textContent]
           continue unless replacement
 
