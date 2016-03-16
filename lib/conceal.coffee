@@ -9,6 +9,9 @@ module.exports =
 
   activate: ->
     replacements = atom.config.get 'conceal.replacements'
+    atom.config.observe 'conceal.replacements', (newValue) ->
+      replacements = newValue
+
     atom.workspace.observeTextEditors (editor) ->
       editor.onDidStopChanging ->
         view = atom.views.getView editor
