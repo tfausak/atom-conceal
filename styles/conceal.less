@@ -2,13 +2,15 @@ atom-text-editor::shadow {
   .line:not(.cursor-line) {
     .concealed {
       display: inline-block;
+      position: relative;
       visibility: hidden;
 
       &:before {
         content: attr(data-replacement);
-        display: inline-block;
+        position: absolute;
         visibility: visible;
-        width: 0;
+        text-align: center;
+        min-width: 100%;
       }
     }
   }
