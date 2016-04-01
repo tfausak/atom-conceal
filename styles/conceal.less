@@ -5,13 +5,22 @@ atom-text-editor::shadow {
       position: relative;
       visibility: hidden;
 
-      &:before {
+      &::before {
         content: attr(data-replacement);
         position: absolute;
         visibility: visible;
         text-align: center;
         min-width: 100%;
       }
+
+      .length-loop(@counter) when (@counter > 0) {
+        .length-loop((@counter - 1));
+        &[data-replacement-length="@{counter}"] {
+          width: @counter + 0em;
+        }
+      }
+
+      .length-loop(10);
     }
   }
 }
