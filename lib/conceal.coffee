@@ -6,6 +6,13 @@ module.exports =
         '::': '∷'
         '=>': '⇒'
         '->': '→'
+    preserveWidth:
+      type: 'boolean'
+      default: yes
+      title: 'Preserve the width of the concealed element'
+      description: 'When replacing an element you have the choice of replacing
+                    the entire value (including it\'s space) or preseve the
+                    width of the original element.'
 
   activate: ->
     replacements = atom.config.get 'conceal.replacements'
@@ -23,3 +30,5 @@ module.exports =
 
           element.classList.add 'concealed'
           element.dataset.replacement = replacement
+          unless atom.config.get 'conceal.preserveWidth'
+            element.dataset.replacementLength = replacement.length
