@@ -24,11 +24,11 @@ module.exports =
         view = atom.views.getView editor
         return unless view
 
-        for element in view.querySelectorAll '::shadow .line span:not(.concealed)'
+        for element in view.querySelectorAll '.line span:not(.syntax--concealed)'
           replacement = replacements[element.textContent]
           continue unless replacement
 
-          element.classList.add 'concealed'
+          element.classList.add 'syntax--concealed'
           element.dataset.replacement = replacement
           unless atom.config.get 'conceal.preserveWidth'
             element.dataset.replacementLength = replacement.length
