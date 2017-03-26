@@ -2,10 +2,6 @@ module.exports =
   config:
     replacements:
       type: 'object'
-      default:
-        '::': '∷'
-        '=>': '⇒'
-        '->': '→'
     preserveWidth:
       type: 'boolean'
       default: yes
